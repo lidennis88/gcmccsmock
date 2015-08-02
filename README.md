@@ -15,15 +15,16 @@ It is useful in the development, QA and performance test environment.
 * Dagger
 * Slf4j
 
-## Build it
+## Installation
 
-Use the following command to build the jar with dependencies:
+### Build
+build the jar with dependencies:
 
 mvn clean compile assembly:single
 
-## Install it
+### Install
 
-Use the following command to copy the jar file to target location:
+copy the jar file to target location:
 
 cp target/mock-gcm-xmpp-server-1.0.0-SNAPSHOT-jar-with-dependencies.jar <target_location>
 
