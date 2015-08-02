@@ -20,27 +20,28 @@ It is useful in the development, QA and performance test environment.
 ### Build
 build the jar with dependencies:
 
-mvn clean compile assembly:single
+	mvn clean compile assembly:single
 
 ### Install
 
 copy the jar file to target location:
 
-cp target/mock-gcm-xmpp-server-1.0.0-SNAPSHOT-jar-with-dependencies.jar <target_location>
+	cp target/mock-gcm-xmpp-server-1.0.0-SNAPSHOT-jar-with-dependencies.jar <target_location>
 
 ## Configuration
 
 * Take a look at the configuration file src/main/resource/config.properties. Create a new config file if there is a need to change it.
 * You can use the built-in keystore (src/main/resources/mockgcm.keystore) or supply your own or create a new one with the keytool command, e.g.
 
-keytool -genkey -alias mockgcm -keysize 512 -validity 365 -keyalg RSA -dname "CN=yourco.com,O=your co.,L=SF,ST=CA,C=US" -keypass password -storepass password -keystore mockgcm.cert
+		keytool -genkey -alias mockgcm -keysize 512 -validity 365 -keyalg RSA -dname "CN=yourco.com,O=your co.,L=SF,ST=CA,C=US" -keypass password -storepass password -keystore mockgcm.cert
 
 
 ## Run it
 
 1. start the Redis server if message store is needed (message.store.enabled=true).
-2. start the mock server
-java -cp <target_location>/mockgcmxmppserver-1.0.0-SNAPSHOT-jar-with-dependencies.jar -DconfigFile=<CONFIG_FILE_PATH> com.jql.gcmccsmock.MockGCMXmppServer
+2. start the mock server:
+
+		java -cp <target_location>/mockgcmxmppserver-1.0.0-SNAPSHOT-jar-with-dependencies.jar -DconfigFile=<CONFIG_FILE_PATH> com.jql.gcmccsmock.MockGCMXmppServer
 
 ## Usage
 
