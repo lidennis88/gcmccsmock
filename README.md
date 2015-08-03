@@ -47,6 +47,6 @@ copy the jar file to target location:
 
 * To use it, simply have your GCM CCS provider connect to the mock server with the same credentials and keystore as specified in the config file. Then the provider can send GCM requests as usual. If all is good, for each GCM request, the provider will receive an Ack message and a delivery receipt shortly after.
 * To trigger a Nack message, use the registration id specified in the configuration property bad.registration.id.
-* To trigger a draining message, use the registration id specified in the configuration property draining.registration.id.
+* To trigger a draining control message, use the registration id specified in the configuration property draining.registration.id.
 
 Enjoy and if you find it useful, drop me a line or star it. Thanks.

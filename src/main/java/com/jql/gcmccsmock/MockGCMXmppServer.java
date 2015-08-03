@@ -1,5 +1,5 @@
 /*
- * Copyright 2014, Dennis Li
+ * Copyright 2015, Dennis Li
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ public class MockGCMXmppServer {
   private static final Logger logger = LoggerFactory.getLogger(MockGCMXmppServer.class);
 
   private static final String DEFAULT_PORT = "5235";
-  private static final String DEFAULT_CERT_FILE = "mockgcm.cert";
+  private static final String DEFAULT_CERT_FILE = "mockgcm.keystore";
 
   public static final String REGEX_COMMA = "\\s*,\\s*";
 
